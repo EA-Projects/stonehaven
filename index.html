@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stonehaven — website concept (review draft 1.5)</title>
+<meta name="description" content="Stonehaven is a hybrid fronting carrier and a member of the Ledgebrook group. We provide MGAs and program administrators with AM Best A- (Excellent), FSC VIII rated paper, a structured onboarding process and timely decisions from experienced underwriters.">
+<link rel="icon" type="image/png" href="assets/img/stonehaven-mark.png">
+
+<!-- Open Graph (link previews). Replace og:image with an absolute URL once the site has a domain. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Stonehaven">
+<meta property="og:description" content="Stonehaven is a hybrid fronting carrier and a member of the Ledgebrook group. We provide MGAs and program administrators with AM Best A- (Excellent), FSC VIII rated paper, a structured onboarding process and timely decisions from experienced underwriters.">
+<meta property="og:image" content="assets/img/logo-dark.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<div class="concept">Website concept, review draft 1.5, for internal review. Placeholder copy and illustrative figures; not for publication.</div>
+
+<header class="site">
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="#top">
+      <img class="logo logo-light" src="assets/img/logo-light.png" alt="Stonehaven Specialty Insurance, a member company of Ledgebrook Inc. Home">
+      <img class="logo logo-dark" src="assets/img/logo-dark.png" alt="Stonehaven Specialty Insurance, a member company of Ledgebrook Inc. Home">
+    </a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" id="burger">Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#reinsurers">Reinsurers</a></li>
+      <li><a href="#platform">Platform</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#insights">Insights</a></li>
+    </ul>
+    <a class="login-link" href="#portal" title="Opens the partner portal (separate secure site)"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2.5" y="6" width="9" height="6.5" rx="1.5"></rect><path d="M4.5 6 V4.5 Q4.5 2 7 2 Q9.5 2 9.5 4.5 V6"></path></svg>Partner login</a>
+    <a class="cta-sm" href="#contact">Contact us</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <div class="switch" role="group" aria-label="Select audience">
+        <span class="lbl">What we offer</span>
+        <button type="button" aria-pressed="true" data-a="mga">MGAs</button>
+        <button type="button" aria-pressed="false" data-a="re">Reinsurers</button>
+      </div>
+      <h1 class="tagline"><span>Built for speed.</span> <span>Driven with discipline.</span> <span>Backed by strength.</span></h1>
+      <p class="lede" aria-live="polite">Stonehaven is a hybrid fronting carrier and a member of the Ledgebrook group. We provide MGAs and program administrators with AM Best A- (Excellent), FSC VIII rated paper, a structured onboarding process and timely decisions from experienced underwriters.</p>
+      <div class="ctas">
+        <a class="btn light" href="#programs" id="cta1" data-topic="program">Start a program conversation</a>
+        <a class="btn ghost-d" href="#about">Meet the Ledgebrook family</a>
+      </div>
+    </div>
+    <aside class="tele" aria-label="Illustration of the partner portal program dashboard">
+      <div class="tele-head"><b>Program dashboard</b><span>Partner portal</span></div>
+      <div class="trow"><span class="ic ic--blue"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#7FB7FF" stroke-width="1.6" aria-hidden="true"><path d="M2 7 H12 M8 3 L12 7 L8 11"></path></svg></span><span class="t">Bordereaux<small>Validated and reconciled on receipt</small></span><span class="v">Automated</span></div>
+      <div class="trow"><span class="ic ic--violet"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#A9C9EE" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="5"></circle><path d="M7 4 V7 L9 8.5"></path></svg></span><span class="t">Referrals<small>Routed to an underwriter with full program history</small></span><span class="v">Tracked</span></div>
+      <div class="trow"><span class="ic ic--sky"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#BFDBFF" stroke-width="1.6" aria-hidden="true"><path d="M7 1.5 L12 3.5 V7 Q12 11 7 12.5 Q2 11 2 7 V3.5 Z"></path></svg></span><span class="t">Program record<small>Binders, endorsements and claims in a single record</small></span><span class="v">Consolidated</span></div>
+      <div class="spark">
+        <div class="k"><span>Actual vs. expected losses</span><span>Program scorecard</span></div>
+        <svg viewBox="0 0 300 64" preserveAspectRatio="none" aria-hidden="true">
+          <defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A79C6" stop-opacity=".5"></stop><stop offset="1" stop-color="#3A79C6" stop-opacity="0"></stop></linearGradient></defs>
+          <line x1="0" y1="22" x2="300" y2="22" stroke="rgba(238,241,252,.35)" stroke-dasharray="3 4"></line>
+          <path d="M0 40 L30 34 L60 38 L90 30 L120 33 L150 27 L180 31 L210 26 L240 29 L270 25 L300 27 V64 H0 Z" fill="url(#sg)" opacity=".5"></path>
+          <path d="M0 40 L30 34 L60 38 L90 30 L120 33 L150 27 L180 31 L210 26 L240 29 L270 25 L300 27" fill="none" stroke="#7FB7FF" stroke-width="2"></path>
+        </svg>
+      </div>
+      <div class="tele-foot">Illustrative only</div>
+    </aside>
+  </div>
+</section>
+
+<div class="proof">
+  <ul class="wrap">
+    <li><span class="proof-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"></rect><path d="M10 10h4v4h-4z"></path><path d="M9 2.5v3.5M15 2.5v3.5M9 18v3.5M15 18v3.5M2.5 9h3.5M2.5 15h3.5M18 9h3.5M18 15h3.5"></path></svg></span><span class="proof-txt"><b>AI-native platform</b><span>Best-in-class technology and data infrastructure</span></span></li>
+    <li><span class="proof-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M20.5 20.5 16 16"></path><path d="M8 11l2 2 4-4"></path></svg></span><span class="proof-txt"><b>Owner-grade underwriting</b><span>Each program assessed as if fully retained</span></span></li>
+    <li><span class="proof-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"></circle><path d="M8.6 13.9 7 22l5-2.6 5 2.6-1.6-8.1"></path></svg></span><span class="proof-txt"><b>AM Best A- (Excellent)</b><span>Financial Size Category VIII</span></span></li>
+    <li><span class="proof-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"></path><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8"></path><path d="M18 14.3c2.1.6 3.5 2.6 3.5 5.7"></path></svg></span><span class="proof-txt"><b>Experienced leadership</b><span>Industry veterans oversee every program</span></span></li>
+  </ul>
+</div>
+
+<section class="sec" aria-labelledby="aud-h">
+  <div class="wrap">
+    <div class="sec-head sec-head--center">
+      <div><span class="kicker">Who we work with</span><h2 id="aud-h">Stonehaven serves both sides of the program relationship</h2></div>
+      <p class="lede">We're selective, backing only programs that work for everyone at the table: the MGA, its reinsurers and Stonehaven. Then we stay at the table to make sure they do.</p>
+    </div>
+    <div class="aud">
+      <a class="aud-card aud-card--mga" href="#programs">
+        <span class="who">MGAs &amp; program administrators</span>
+        <p>We vet your program like it's our own, then back it with our capital, our underwriters and our technology.</p>
+        <span class="go"><span class="go-txt">How we work with MGAs</span><svg class="go-ic" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span>
+      </a>
+      <div class="hub">
+        <span class="hub-label l">MGAs get a partner, not just paper.</span>
+        <span class="hub-node"><img src="assets/img/stonehaven-mark.png" alt=""></span>
+        <span class="hub-below">
+          <b>Stonehaven</b>
+          <span class="hub-label r">Vets every program. Shares the risk with reinsurers.</span>
+        </span>
+      </div>
+      <a class="aud-card aud-card--re" href="#reinsurers">
+        <span class="who">Reinsurers &amp; capacity providers</span>
+        <p>Consistent underwriting standards, current data on the programs you support, and reinsurance security controls built into our operations.</p>
+        <span class="go"><span class="go-txt">How we work with reinsurers</span><svg class="go-ic" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec dusk-sec way-sec" id="stonehaven-way" aria-labelledby="way-h">
+  <div class="wrap">
+    <span class="kicker">The Stonehaven way</span>
+    <div class="way">
+      <div class="way-copy">
+        <h2 id="way-h">What we stand for</h2>
+        <p class="lede">Anyone can rent out paper. Dennis Sparks, CEO, on why we chose to build something different, and what it means for every partner we back.</p>
+        <blockquote class="way-quote">
+          <svg class="way-quote-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 18.5v-5.2C4 9 6.2 6.3 10 5.5l.7 1.6C8.6 7.9 7.6 9.4 7.5 11.5H10v7H4Zm10 0v-5.2C14 9 16.2 6.3 20 5.5l.7 1.6c-2.1.8-3.1 2.3-3.2 4.4H20v7h-6Z"></path></svg>
+          <p>We underwrite the underwriter, then we stay in the room. Substance over paper, every time.</p>
+          <cite>Dennis Sparks, CEO</cite>
+        </blockquote>
+      </div>
+      <div class="way-video">
+        <div class="vid" id="way-video">
+          <video class="vid-media" src="assets/video/placeholder.mp4" preload="metadata" playsinline aria-label="The Stonehaven way, with Dennis Sparks, CEO"></video>
+          <button class="vid-play" type="button" aria-label="Play video: The Stonehaven way">
+            <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5 V18.5 L18.5 12 Z" fill="currentColor"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec programs-sec" id="programs" aria-labelledby="prog-h">
+  <div class="wrap">
+    <div class="sec-head sec-head--center">
+      <div><span class="kicker">For MGAs &amp; program administrators</span><h2 id="prog-h">Great underwriters deserve more than paper</h2></div>
+      <p class="lede">Your growth is our business. We keep a share of every program we back, so we're invested in helping it scale, with rated capacity, fast answers and experienced underwriters along the way.</p>
+    </div>
+    <div class="race" role="group" aria-label="How Stonehaven backs program partners">
+      <div class="pillars">
+        <div class="pl"><span class="pl-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L20 6.5 V12 Q20 18 12 21 Q4 18 4 12 V6.5 Z"></path></svg></span><h3>Capacity to build on</h3><p>A- (Excellent), FSC VIII rated paper and established reinsurance relationships, so a strong program has room to grow.</p></div>
+        <div class="pl"><span class="pl-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20 Q5 13.5 12 13.5 Q19 13.5 19 20"></path></svg></span><h3>Expertise at every stage</h3><p>Seasoned insurance professionals vet each program up front, then stay engaged long after it launches.</p></div>
+        <div class="pl"><span class="pl-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17 L9 12 L13 15 L20 7"></path><path d="M15 7 H20 V12"></path></svg></span><h3>Speed without shortcuts</h3><p>Reviews run in parallel on our technology platform, so decisions come quickly and rigor stays intact.</p></div>
+      </div>
+      <div class="orbit" role="group" aria-label="The Ledgebrook technology platform supports the whole partnership">
+        <svg class="orbit-svg" viewBox="0 0 400 400" aria-hidden="true">
+          <defs>
+            <path id="orbit-p1" d="M37.62 185.79 A163 163 0 0 1 185.79 37.62"></path>
+            <path id="orbit-p2" d="M214.21 37.62 A163 163 0 0 1 362.38 185.79"></path>
+            <path id="orbit-p3" d="M215.08 372.34 A173 173 0 0 0 372.34 215.08"></path>
+            <path id="orbit-p4" d="M27.66 215.08 A173 173 0 0 0 184.92 372.34"></path>
+          </defs>
+          <circle class="orbit-track" cx="200" cy="200" r="150"></circle>
+          <circle class="orbit-fill" cx="200" cy="200" r="150" pathLength="100" transform="rotate(225 200 200)"></circle>
+          <circle class="orbit-dot orbit-dot--1" cx="93.93" cy="93.93" r="5.5"></circle>
+          <circle class="orbit-dot orbit-dot--2" cx="306.07" cy="93.93" r="5.5"></circle>
+          <circle class="orbit-dot orbit-dot--3" cx="306.07" cy="306.07" r="5.5"></circle>
+          <circle class="orbit-dot orbit-dot--4" cx="93.93" cy="306.07" r="5.5"></circle>
+          <text class="orbit-label orbit-label--1" text-anchor="middle"><textPath href="#orbit-p1" startOffset="50%">Secure data room</textPath></text>
+          <text class="orbit-label orbit-label--2" text-anchor="middle"><textPath href="#orbit-p2" startOffset="50%">Automated data checks</textPath></text>
+          <text class="orbit-label orbit-label--3" text-anchor="middle"><textPath href="#orbit-p3" startOffset="50%">Data feeds connected</textPath></text>
+          <text class="orbit-label orbit-label--4" text-anchor="middle"><textPath href="#orbit-p4" startOffset="50%">Live program scorecard</textPath></text>
+        </svg>
+        <div class="orbit-center"><span class="orbit-tag">Ledgebrook technology platform</span><span class="orbit-sub">From the first conversation to a live program</span></div>
+        <ol class="orbit-steps"><li>Secure data room</li><li>Automated data checks</li><li>Data feeds connected</li><li>Live program scorecard</li></ol>
+      </div>
+    </div>
+
+    <aside class="ready" aria-labelledby="ready-h">
+      <div><h3 id="ready-h">Have a program in mind?</h3>
+      <p>A brief introduction is all it takes to begin. No submission materials needed; one of our underwriters will follow up to arrange a call if we see a mutual fit.</p></div>
+      <a class="btn light" href="#contact" data-topic="program">Start a conversation</a>
+    </aside>
+
+    <div class="spec">
+      <div class="appetite">
+        <h3>Underwriting appetite</h3>
+        <dl>
+          <div><dt>Lines of business</dt><dd>[Commercial lines to be confirmed]</dd></div>
+          <div><dt>Paper</dt><dd>[Admitted and E&amp;S, by state]</dd></div>
+          <div><dt>Program size</dt><dd>[Minimum premium to be confirmed]</dd></div>
+          <div><dt>States</dt><dd>[Footprint to be confirmed]</dd></div>
+        </dl>
+      </div>
+      <h3 class="uses-h">How partners use our paper</h3>
+      <div class="uses">
+        <div class="use"><h3>Programs</h3><p>Fronting capacity for MGA and program administrator business.</p></div>
+        <div class="use use--navy"><h3>Captives</h3><p>Rated fronting for captives that retain risk.</p></div>
+        <div class="use"><h3>Sidecars &amp; SPVs</h3><p>Fronting support for sidecars and special purpose vehicles.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec dusk-sec ever" id="reinsurers" aria-labelledby="re-h">
+  <div class="wrap">
+    <div class="sec-head sec-head--center">
+      <div><span class="kicker">For reinsurers &amp; capacity providers</span><h2 id="re-h">Underwriting discipline backed by our own capital</h2></div>
+      <p class="lede">Speed only matters if you stay on the track. We underwrite every program as if we kept all of it, because we're accountable for all of it. Your capital gets the scrutiny we'd give our own.</p>
+    </div>
+    <div class="brakes">
+      <div><span class="n">Alignment</span><h3>Our capital is in every program</h3><p>We keep a share of every program we front and underwrite it as if we kept it all. We win and lose together.</p></div>
+      <div><span class="n">Oversight</span><h3>Oversight that never switches off</h3><p>Expert judgment and live program data work in tandem, so issues surface early and you stay informed on the programs you back.</p></div>
+      <div><span class="n">Security</span><h3>Security we can stand behind</h3><p>Rigorous collateral and counterparty discipline, built into how we operate.</p></div>
+    </div>
+    <div class="strength" aria-label="Financial strength and licensing">
+      <div><small>AM Best rating</small><b>A- (Excellent), FSC VIII</b><span>As of [rating date]</span></div>
+      <div><small>Domicile</small><b>[State]</b><span>Certificate of authority</span></div>
+      <div><small>Licensing</small><b>[Admitted and E&amp;S footprint]</b><span>Expanding state by state</span></div>
+    </div>
+    <p class="re-cta"><a class="btn light" href="#contact" data-topic="capacity">Request a capacity briefing</a></p>
+  </div>
+</section>
+
+<section class="claims-band" id="claims-philosophy" aria-labelledby="claims-h">
+  <div class="wrap">
+    <div class="sec-head sec-head--center cb">
+      <div><span class="kicker">Claims</span><h2 id="claims-h">Claims are where promises are kept</h2></div>
+      <p class="lede">Every claim on our paper carries our name. Partners may handle the day-to-day, but accountability never leaves Stonehaven.</p>
+      <a class="cb-link" href="#claims-philosophy">Our approach to claims →</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="platform" aria-labelledby="plat-h">
+  <div class="wrap">
+    <div class="sec-head sec-head--center">
+      <div><span class="kicker">Platform</span><h2 id="plat-h">AI-native from day one</h2></div>
+      <p class="lede">Stonehaven runs on the platform that powers Ledgebrook. Technology flags what matters early and our underwriters act on it, so partners get faster decisions and a clear view of their program without chasing spreadsheets.</p>
+    </div>
+    <div class="portal" aria-label="Illustration of the partner portal">
+      <div class="p-top"><div><b>Sample program: Contractors GL</b><span>Partner portal preview</span></div><span class="tag-ill">Illustration</span></div>
+      <div class="pv">
+        <div class="pv-col">
+          <h4>Performance</h4>
+          <div class="mini"><div class="mini-k"><span>Premium</span><span class="leg"><i class="a"></i>Actual <i class="p"></i>Plan</span></div>
+            <svg viewBox="0 0 240 64" preserveAspectRatio="none" aria-hidden="true"><path d="M0 56 L240 12" stroke="#5F6986" stroke-dasharray="4 4" fill="none"></path><path d="M0 58 C40 52 60 44 90 40 S150 26 180 22 S220 14 240 10" stroke="#3A79C6" stroke-width="2.4" fill="none"></path></svg></div>
+          <div class="mini"><div class="mini-k"><span>Losses</span><span class="leg"><i class="a"></i>Actual <i class="p"></i>Expected</span></div>
+            <svg viewBox="0 0 240 64" preserveAspectRatio="none" aria-hidden="true"><path d="M0 54 L240 18" stroke="#5F6986" stroke-dasharray="4 4" fill="none"></path><path d="M0 58 C50 54 80 48 110 44 S170 36 200 32 S230 28 240 26" stroke="#3A79C6" stroke-width="2.4" fill="none"></path></svg></div>
+          <div class="signal good"><span class="sig-k"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17 L9 12 L13 15 L20 7"></path><path d="M15 7 H20 V12"></path></svg>Positive signal</span><p>Retention among landscaping contractors running ahead of plan.</p><span class="sig-act">Capacity review suggested</span></div>
+        </div>
+        <div class="pv-col">
+          <div class="signal"><span class="sig-k"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 L22 20 H2 Z"></path><path d="M12 10 V14"></path><path d="M12 17.5 V17.6"></path></svg>Early signal</span><p>Loss activity among roofing contractors trending above plan.</p><span class="sig-act">Flagged for underwriter review</span></div>
+          <h4>Referrals</h4>
+          <div class="ref"><b>Higher limit request</b><span class="st with">With underwriter</span><small>Full submission and program history attached</small></div>
+          <div class="ref"><b>New class within appetite</b><span class="st ok">Decision sent</span><small>Answer and rationale recorded</small></div>
+        </div>
+      </div>
+      <div class="p-foot">Illustrative only. Partners see their own program data after signing in.</div>
+    </div>
+    <div class="signin" id="portal">
+      <div><b>Already a Stonehaven partner?</b><p>Submit bordereaux, track referrals and review your program scorecard.</p></div>
+      <a class="btn primary" href="#portal">Sign in to the partner portal</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec dusk-sec" id="about" aria-labelledby="about-h">
+  <div class="wrap">
+    <div class="sec-head sec-head--center">
+      <div><span class="kicker">About</span><h2 id="about-h">Stonehaven brings Ledgebrook speed to the carrier side</h2></div>
+      <p class="lede">Same culture, same technology, a new lane: Stonehaven is the hybrid fronting carrier that keeps MGAs moving fast and reinsurers confident.</p>
+    </div>
+    <div class="family">
+      <ul class="fam-list" aria-label="Ledgebrook group companies">
+        <li><span class="mk"><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="3" y="3" width="6" height="24" rx="1" fill="#1A7BEF"></rect><rect x="12" y="3" width="6" height="24" rx="1" fill="#1A7BEF"></rect><path d="M21 3 Q27 9 21 15 Q27 21 21 27" stroke="#1A7BEF" stroke-width="5" fill="none"></path></svg></span><b><a href="https://www.ledgebrook.com/" target="_blank" rel="noopener">Ledgebrook</a></b><span class="role">Technology-led specialty insurance platform</span></li>
+        <li><span class="mk"><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="3" y="3" width="6" height="24" rx="1" fill="#1A7BEF"></rect><rect x="12" y="3" width="6" height="24" rx="1" fill="#1A7BEF"></rect><path d="M21 3 Q27 9 21 15 Q27 21 21 27" stroke="#1A7BEF" stroke-width="5" fill="none"></path></svg></span><b><a href="https://www.ledgebrook.com/ledgebrook-re" target="_blank" rel="noopener">Ledgebrook Re</a></b><span class="role">Reinsurance broking and advisory</span></li>
+        <li class="here"><span class="mk"><img src="assets/img/stonehaven-mark.png" alt=""></span><b>Stonehaven</b><span class="role">Hybrid fronting carrier</span></li>
+      </ul>
+      <p class="fam-note">One family, one ambition: faster, stronger specialty insurance. Each company runs its own book while protecting yours.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="team" aria-labelledby="team-h">
+  <div class="wrap">
+    <div class="sec-head sec-head--center">
+      <div><span class="kicker">Leadership</span><h2 id="team-h">Experienced leadership across the business</h2></div>
+      <p class="lede">Experienced leaders across underwriting, risk and operations. Appointments will be announced shortly.</p>
+    </div>
+    <div class="team">
+      <article class="tcard tcard--programs">
+        <div class="tbg" aria-hidden="true">PR</div>
+        <svg class="sil" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="78" r="38"></circle><path d="M28 200 C30 146 64 124 100 124 C136 124 170 146 172 200 Z"></path></svg>
+        <div class="tinfo"><h3>Programs</h3><span class="ttl">Appointment to be announced</span></div>
+      </article>
+      <article class="tcard tcard--risk">
+        <div class="tbg" aria-hidden="true">RK</div>
+        <svg class="sil" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="78" r="38"></circle><path d="M28 200 C30 146 64 124 100 124 C136 124 170 146 172 200 Z"></path></svg>
+        <div class="tinfo"><h3>Risk</h3><span class="ttl">Appointment to be announced</span></div>
+      </article>
+      <article class="tcard tcard--ops">
+        <div class="tbg" aria-hidden="true">OP</div>
+        <svg class="sil" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="78" r="38"></circle><path d="M28 200 C30 146 64 124 100 124 C136 124 170 146 172 200 Z"></path></svg>
+        <div class="tinfo"><h3>Operations</h3><span class="ttl">Appointment to be announced</span></div>
+      </article>
+    </div>
+    <div class="careers" id="careers">
+      <div><h3>Careers at Stonehaven</h3><p>We are building our team across program underwriting, actuarial, reinsurance and claims. Stonehaven shares the culture and resources of the wider Ledgebrook group.</p></div>
+      <div><ul><li>Program underwriting<span>[Open roles]</span></li><li>Actuarial and reinsurance<span>[Open roles]</span></li><li>Claims oversight<span>[Open roles]</span></li></ul><p class="careers-cta"><a class="btn primary" href="#careers">View open roles</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec soft insights-sec" id="insights" aria-labelledby="insights-h">
+  <div class="wrap">
+    <div class="sec-head sec-head--center">
+      <div><span class="kicker">Insights</span><h2 id="insights-h">The latest from Stonehaven</h2></div>
+    </div>
+    <div class="pi">
+      <div class="pi-card" id="press">
+        <div class="pi-head"><h3>Press</h3></div>
+        <ul class="news" id="news-list">
+          <li><time>[Date]</time><a href="#press">Ledgebrook launches Stonehaven, a hybrid fronting carrier for specialty programs</a></li>
+          <li><time>[Date]</time><a href="#press">Stonehaven assigned AM Best Financial Strength Rating of A- (Excellent) and Financial Size Category VIII</a></li>
+          <li><time>[Date]</time><a href="#press">Stonehaven appoints [Name] as Head of Programs</a></li>
+          <li class="news-more" hidden><time>[Date]</time><a href="#press">Stonehaven launches first program partnership with [MGA name]</a></li>
+          <li class="news-more" hidden><time>[Date]</time><a href="#press">Stonehaven expands admitted and E&amp;S licensing to [number] states</a></li>
+          <li class="news-more" hidden><time>[Date]</time><a href="#press">Stonehaven to attend [industry conference]</a></li>
+        </ul>
+        <div class="news-foot">
+          <button class="btn ghost" type="button" aria-expanded="false" aria-controls="news-list" id="news-toggle">More announcements</button>
+          <span class="news-links"><a href="#press">Press kit and fact sheet</a></span>
+        </div>
+      </div>
+      <div class="pi-card" id="industry-insights">
+        <div class="pi-head"><h3>Industry insights</h3><a class="pi-all" href="#industry-insights">All insights →</a></div>
+        <ul class="ins">
+          <li><span class="cat cat--programs">Programs</span><a href="#industry-insights">What makes a program built to last</a><span class="st-topic">Sample topic</span></li>
+          <li><span class="cat cat--reinsurers">Reinsurers</span><a href="#industry-insights">What reinsurers look for in a hybrid fronting carrier</a><span class="st-topic">Sample topic</span></li>
+          <li><span class="cat cat--data">Data</span><a href="#industry-insights">Bordereaux: the quiet driver of program performance</a><span class="st-topic">Sample topic</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="insights-note">Sample headlines and topics for layout only.</p>
+  </div>
+</section>
+
+<section class="sec dusk-sec contact-sec" id="contact-sec" aria-labelledby="contact-h">
+  <div class="wrap">
+    <div class="sec-head sec-head--center">
+      <div><span class="kicker">Contact us</span><h2 id="contact-h">How can we help?</h2></div>
+      <p class="lede">For program, reinsurance capacity, media or investor inquiries, please complete the form and the appropriate team will respond.</p>
+    </div>
+    <div class="contact-card" id="contact">
+      <form id="form" novalidate>
+        <div><label for="f-name">Name</label><input id="f-name" name="fname" autocomplete="name" required></div>
+        <div><label for="f-email">Work email</label><input id="f-email" name="femail" type="email" autocomplete="email" required></div>
+        <div class="full"><label for="f-topic">Inquiry type</label>
+          <select id="f-topic" name="ftopic">
+            <option value="program">Program conversation (MGA or program administrator)</option>
+            <option value="capacity">Reinsurance capacity</option>
+            <option value="press">Media or analyst inquiry</option>
+            <option value="investor">Investor relations</option>
+            <option value="other">Other</option>
+          </select></div>
+        <div class="full"><label for="f-msg">Message</label><textarea id="f-msg" name="fmsg" placeholder="Tell us briefly about your program, such as lines of business and timing. Please don't include submission materials; we'll share them securely after we speak."></textarea></div>
+        <div class="full form-actions"><button class="btn light" type="submit">Send inquiry</button><p class="note">Concept only: inquiries are not sent.</p></div>
+        <div class="full err" id="err" role="alert" hidden></div>
+        <div class="full sent" id="sent" role="status" hidden>Thank you. Your inquiry has been received and will be directed to the appropriate team.</div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div><a class="brand" href="#top"><img src="assets/img/stonehaven-mark.png" alt=""><span class="name">Stonehaven</span></a>
+        <p class="footer-about">A hybrid fronting carrier for specialty programs. A Ledgebrook company.</p></div>
+      <div><h4>Partners</h4><ul><li><a href="#programs">Programs</a></li><li><a href="#reinsurers">Reinsurers</a></li><li><a href="#portal">Partner login</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#about">About</a></li><li><a href="#team">Leadership</a></li><li><a href="#careers">Careers</a></li><li><a href="#insights">Insights</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h4>Policyholders</h4><ul><li><a href="#top">Report a claim</a></li><li><a href="#top">Notices and complaints</a></li><li><a href="#top">State licenses</a></li></ul><h4 class="footer-subhead">Ledgebrook group</h4><ul><li><a href="https://www.ledgebrook.com/" target="_blank" rel="noopener">Ledgebrook</a></li><li><a href="https://www.ledgebrook.com/ledgebrook-re" target="_blank" rel="noopener">Ledgebrook Re</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© 2026 Stonehaven [legal entity name]. AM Best Financial Strength Rating A- (Excellent), Financial Size Category VIII, as of [date]; for the latest rating, visit ambest.com. [Domicile and licensing disclosures pending Legal and Compliance review.]</span><span><a href="#top">Privacy</a><a href="#top">Terms</a><a href="#top">Accessibility</a><a href="#top">Fraud warning</a></span></div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
