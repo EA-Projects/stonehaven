@@ -82,8 +82,10 @@ header.site.scrolled .logo-dark{display:block}
 .menu{display:flex; gap:30px; list-style:none; margin:0 0 0 auto; padding:0}
 .menu a{font-weight:500; font-size:.96rem; text-decoration:none; opacity:.88}
 .menu a:hover{opacity:1}
-.cta-sm{font-weight:500; font-size:.95rem; text-decoration:none; padding:6px 14px; border-radius:var(--radius-sm); background:var(--on-dusk); color:var(--dusk)}
+.cta-sm{font-weight:500; font-size:.95rem; text-decoration:none; padding:6px 14px; border-radius:var(--radius-sm); background:var(--on-dusk); color:var(--dusk); transition:background .2s,color .2s}
+.cta-sm:hover{background:var(--blue-tint-line)}
 header.site.scrolled .cta-sm{background:var(--indigo); color:#fff}
+header.site.scrolled .cta-sm:hover{background:var(--indigo-hover)}
 /* ----- Inline arrow link (global): <a class="go"><span class="go-txt">…</span><svg class="go-ic">…</svg></a>
    Also used as a <span> inside a fully clickable card (hover handled by the card). */
 .go{display:inline-flex; align-items:center; gap:6px; font-weight:600; font-size:.95rem; color:var(--indigo); text-decoration:none}
@@ -102,27 +104,11 @@ a.go:hover .go-ic,a.go:focus-visible .go-ic,.aud-card:hover .go-ic,.aud-card:foc
   header.site:has(.nav.open) .logo-light{display:block}
   header.site:has(.nav.open) .logo-dark{display:none}
   .burger{display:block}
-  .menu,.cta-sm,/* ----- Inline arrow link (global): <a class="go"><span class="go-txt">…</span><svg class="go-ic">…</svg></a>
-   Also used as a <span> inside a fully clickable card (hover handled by the card). */
-.go{display:inline-flex; align-items:center; gap:6px; font-weight:600; font-size:.95rem; color:var(--indigo); text-decoration:none}
-.go-txt{text-decoration:underline 1px transparent; text-underline-offset:5px; transition:text-decoration-color .2s}
-.go-ic{flex:none; transition:transform .2s}
-a.go:hover .go-txt,a.go:focus-visible .go-txt,.aud-card:hover .go-txt,.aud-card:focus-visible .go-txt{text-decoration-color:currentColor}
-a.go:hover .go-ic,a.go:focus-visible .go-ic,.aud-card:hover .go-ic,.aud-card:focus-visible .go-ic{transform:translateX(3px)}
-
-.login-link{display:none}
+  .menu,.cta-sm,.login-link{display:none}
   header.site .nav.open{flex-wrap:wrap; height:auto; padding:16px 28px}
   .nav.open .menu{display:flex; flex-direction:column; gap:14px; width:100%; order:3; padding:12px 0 4px}
   .nav.open .cta-sm{display:inline-block; order:5; margin-bottom:14px}
-  .nav.open /* ----- Inline arrow link (global): <a class="go"><span class="go-txt">…</span><svg class="go-ic">…</svg></a>
-   Also used as a <span> inside a fully clickable card (hover handled by the card). */
-.go{display:inline-flex; align-items:center; gap:6px; font-weight:600; font-size:.95rem; color:var(--indigo); text-decoration:none}
-.go-txt{text-decoration:underline 1px transparent; text-underline-offset:5px; transition:text-decoration-color .2s}
-.go-ic{flex:none; transition:transform .2s}
-a.go:hover .go-txt,a.go:focus-visible .go-txt,.aud-card:hover .go-txt,.aud-card:focus-visible .go-txt{text-decoration-color:currentColor}
-a.go:hover .go-ic,a.go:focus-visible .go-ic,.aud-card:hover .go-ic,.aud-card:focus-visible .go-ic{transform:translateX(3px)}
-
-.login-link{display:inline-flex; order:4; width:100%; margin:0 0 14px; padding:12px 0 0; border-left:0; border-top:1px solid color-mix(in srgb,currentColor 25%,transparent)}
+  .nav.open .login-link{display:inline-flex; order:4; width:100%; margin:0 0 14px; padding:12px 0 0; border-left:0; border-top:1px solid color-mix(in srgb,currentColor 25%,transparent)}
 }
 
 /* --------------------------------------------------------------------------
@@ -130,7 +116,7 @@ a.go:hover .go-ic,a.go:focus-visible .go-ic,.aud-card:hover .go-ic,.aud-card:foc
    -------------------------------------------------------------------------- */
 .btn{display:inline-flex; align-items:center; gap:10px; font:500 1rem var(--body); text-decoration:none; padding:10px 18px; border-radius:var(--radius-sm); border:1.5px solid transparent; cursor:pointer; transition:background .2s,color .2s,border-color .2s}
 .btn.light{background:var(--on-dusk); color:var(--dusk)}
-.btn.light:hover{background:#fff}
+.btn.light:hover{background:var(--blue-tint-line)}
 .btn.ghost-d{border-color:rgba(238,241,252,.35); color:var(--on-dusk)}
 .btn.ghost-d:hover{border-color:var(--on-dusk)}
 .btn.primary{background:var(--indigo); color:#fff}
@@ -160,22 +146,21 @@ a.go:hover .go-ic,a.go:focus-visible .go-ic,.aud-card:hover .go-ic,.aud-card:foc
 .switch button[aria-pressed="true"]{color:var(--on-dusk); border-bottom-color:#7FB7FF}
 
 /* Program dashboard card */
-.tele{background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.035)); border:1px solid var(--dusk-line); border-radius:var(--radius-md); padding:22px; backdrop-filter:blur(8px); box-shadow:0 40px 80px -40px rgba(0,0,0,.6)}
+.tele{--title:var(--title-ink); color:var(--ink); background:var(--card); border:1px solid var(--line); border-radius:var(--radius-md); padding:28px; box-shadow:0 40px 80px -40px rgba(0,0,0,.6)}
 .tele-head{display:flex; justify-content:space-between; align-items:center; margin-bottom:18px}
-.tele-head b{font-family:var(--head); font-weight:600; font-size:1rem}
-.tele-head span{font-size:.8rem; color:var(--on-dusk-2)}
-.tele-foot{font-size:.74rem; color:var(--on-dusk-3); margin-top:12px}
-.trow{display:grid; grid-template-columns:28px 1fr auto; gap:12px; align-items:center; padding:13px 0; border-top:1px solid var(--dusk-line)}
-.trow .ic{width:28px; height:28px; border-radius:var(--radius-sm); display:grid; place-items:center}
-.trow .ic--blue{background:rgba(26,123,239,.22)}
-.trow .ic--violet{background:rgba(140,124,240,.24)}
-.trow .ic--sky{background:rgba(127,183,255,.18)}
-.trow .t{font-size:.93rem}
-.trow .t small{display:block; color:var(--on-dusk-3); font-size:.8rem}
-.trow .v{font:600 .95rem var(--head)}
-.spark{margin-top:16px; padding-top:16px; border-top:1px solid var(--dusk-line)}
-.spark .k{font-size:.8rem; color:var(--on-dusk-3); display:flex; justify-content:space-between}
-.spark svg{width:100%; height:64px; display:block; margin-top:8px}
+.tele-head b{font-family:var(--head); font-weight:600; font-size:1rem; color:var(--title)}
+.trow{display:grid; grid-template-columns:42px minmax(0,1fr) auto; gap:12px; align-items:center; padding:14px 0; border-top:1px solid var(--line)}
+.trow .ic{width:42px; height:42px; border-radius:var(--radius-sm); display:grid; place-items:center}
+.trow .ic--blue{background:#D6E6FA; color:#1D5BA8}
+.trow .ic--violet{background:#E2DEF8; color:#4F40A8}
+.trow .ic--sky{background:#D5ECF4; color:#1A6580}
+.trow .t{font-size:.93rem; color:var(--title); line-height:1.5}
+.trow .t small{display:block; font-weight:400; color:var(--ink-3); font-size:.8rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.trow .st{margin:0}
+.spark{margin-top:0; padding-top:20px; border-top:1px solid var(--line)}
+.spark .k{font-size:.8rem; color:var(--ink-3); display:flex; justify-content:space-between; gap:12px}
+.spark svg{width:100%; height:96px; display:block;}
+.spark path,.spark line{vector-effect:non-scaling-stroke}
 @media (max-width:940px){ .hero-inner{grid-template-columns:1fr; padding:56px 28px 80px} }
 
 /* --------------------------------------------------------------------------
@@ -241,6 +226,7 @@ section.soft{background:var(--bg-soft)}
   /* vertical connector when the cards stack */
   .hub::before{content:""; position:absolute; left:50%; right:auto; top:0; bottom:0; width:3px; height:auto; transform:translateX(-1.5px); background:var(--ring); z-index:0}
 }
+@media (max-width:560px){ .aud-card{padding:28px 24px} }
 
 /* --------------------------------------------------------------------------
    The Stonehaven way (quote + video)
@@ -341,7 +327,7 @@ section.soft{background:var(--bg-soft)}
 .use{display:grid; grid-template-columns:44px minmax(0,1fr); column-gap:16px; padding-right:28px}
 .use .ic-tile{grid-row:span 2}
 .use h3{font-size:1.15rem; margin:0 0 6px}
-.use p{margin:0; font-size:.95rem; color:var(--ink-2)}
+.use p{margin:0; font-size:1rem; color:var(--ink-2)}
 @media (max-width:980px){ .appetite-grid{grid-template-columns:1fr 1fr} }
 @media (max-width:860px){ .spec{padding:28px} .appetite-grid{grid-template-columns:1fr} .uses{grid-template-columns:1fr; gap:28px} }
 
@@ -362,8 +348,7 @@ section.soft{background:var(--bg-soft)}
 .strength small{margin-bottom:6px}
 .strength b{font:600 1.05rem var(--head); color:var(--on-dusk)}
 .strength b + span{display:block; color:var(--on-dusk-3); font-size:.82rem; margin-top:4px}
-@media (max-width:900px){ .strength{grid-template-columns:1fr 1fr} }
-@media (max-width:480px){ .strength{grid-template-columns:1fr} }
+@media (max-width:900px){ .strength{grid-template-columns:1fr; gap:24px} }
 .re-cta{margin:48px auto 0; max-width:none; text-align:center}
 
 /* --------------------------------------------------------------------------
@@ -396,7 +381,9 @@ section.soft{background:var(--bg-soft)}
 .mini-k b{font:600 .95rem var(--head); color:var(--title)}
 .mini-plot{flex:1 1 0; min-height:72px; display:flex}
 .mini-plot svg{flex:1; width:100%; height:auto; min-height:0; display:block; overflow:visible}
-.mini-plot path{vector-effect:non-scaling-stroke} /* keep line weight when the chart stretches */
+.mini-plot path{vector-effect:non-scaling-stroke}
+/* Stacked columns: the charts no longer stretch to match the right column */
+@media (max-width:900px){ .pv-col:first-child .mini{flex:none} } /* keep line weight when the chart stretches */
 .leg{display:inline-flex; align-items:center; gap:6px; color:var(--ink-3); font-size:.76rem}
 .leg i{display:inline-block; width:8px; height:8px; border-radius:50%}
 .leg i.a{background:var(--lb-blue)}
@@ -422,7 +409,7 @@ section.soft{background:var(--bg-soft)}
 .st.with{background:var(--bg-soft); color:var(--ink-2)}
 .st.ok{background:color-mix(in srgb,var(--indigo) 12%,transparent); color:var(--indigo)}
 /* Narrow screens: tags drop below the title again */
-@media (max-width:560px){ .ref{grid-template-columns:minmax(0,1fr)} .ref .st{justify-self:start; margin-top:10px} }
+@media (max-width:560px){ .ref,.signal{grid-template-columns:minmax(0,1fr)} .ref .st,.sig-act{justify-self:start; margin-top:10px} }
 
 /* Partner sign-in */
 
@@ -457,8 +444,7 @@ section.soft{background:var(--bg-soft)}
 .tinfo{position:relative; padding:24px 26px 26px}
 .tinfo h3{font:600 1.35rem var(--head); color:#fff}
 .ttl{display:block; font:600 .9rem var(--body); color:var(--sky); margin:8px 0 0} /* same as .dusk-sec .kicker */
-@media (max-width:980px){ .team{grid-template-columns:1fr 1fr} }
-@media (max-width:480px){ .team{grid-template-columns:1fr} }
+@media (max-width:640px){ .team{grid-template-columns:1fr} .tcard{min-height:200px} }
 
 
 /* --------------------------------------------------------------------------
@@ -499,37 +485,49 @@ section.soft{background:var(--bg-soft)}
 /* --------------------------------------------------------------------------
    Contact
    -------------------------------------------------------------------------- */
-.contact-sec{border-top:1px solid var(--dusk-line)}
-.contact-card{max-width:760px; margin:0 auto; border-radius:var(--radius-md); padding:32px; background:rgba(255,255,255,.06); border:1px solid var(--dusk-line)}
+.contact-card{position:relative; max-width:600px; margin:0 auto; border-radius:var(--radius-md); padding:32px; background:var(--night); color:var(--on-dusk)}
 .contact-card form{display:grid; grid-template-columns:1fr 1fr; gap:16px}
 .contact-card label{display:block; font-size:.88rem; color:var(--on-dusk-2); margin-bottom:6px}
-.contact-card input,.contact-card select,.contact-card textarea{width:100%; font:inherit; font-size:.97rem; color:var(--on-dusk); background:rgba(5,9,26,.5); border:1px solid var(--dusk-line); border-radius:var(--radius-sm); padding:11px 13px}
+.contact-card input,.contact-card select,.contact-card textarea{width:100%; font:inherit; font-size:1rem; line-height:1.5; color:var(--on-dusk); background:rgba(255,255,255,.05); border:1px solid var(--dusk-line); border-radius:var(--radius-sm); padding:8px 14px}
 .contact-card input:focus,.contact-card select:focus,.contact-card textarea:focus{outline:none; border-color:var(--lb-blue)}
+.contact-card select{appearance:none; -webkit-appearance:none; padding-right:40px; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none' stroke='%23AEB8DC' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 14px center; background-size:12px 8px; cursor:pointer}
 .contact-card select option{color:var(--ink)}
-.contact-card textarea{min-height:100px; resize:vertical}
+.contact-card textarea{display:block; min-height:120px; max-height:280px; resize:vertical}
 .contact-card textarea::placeholder{color:var(--on-dusk-3)}
 .full{grid-column:1 / -1}
-.form-actions{display:flex; flex-wrap:wrap; gap:16px; align-items:center}
-.note{font-size:.84rem; color:var(--on-dusk-3); margin:0}
-.sent{padding:12px 14px; border-radius:var(--radius-sm); background:rgba(127,183,255,.14); color:var(--on-dusk); font-size:.95rem}
-.err{padding:12px 14px; border-radius:var(--radius-sm); background:rgba(255,99,99,.14); color:#FFD2D2; font-size:.95rem}
+.form-actions{display:flex; justify-content:center; margin-top:8px}
+.err{padding:8px 12px; border-radius:var(--radius-sm); background:rgba(255,99,99,.12); color:#FFD2D2; font-size:.75rem; text-align:center}
+/* Success: covers the whole form so it can't be sent twice */
+.sent{position:absolute; inset:0; z-index:1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:32px; text-align:center; background:var(--night); border-radius:inherit; animation:sent-in .35s ease-out}
+.sent[hidden]{display:none}
+.sent:focus{outline:none}
+.sent-ic{display:grid; place-items:center; width:64px; height:64px; border-radius:50%; background:rgba(127,183,255,.14); color:var(--sky); box-shadow:0 0 0 8px rgba(127,183,255,.06)}
+.sent-h{margin:24px 0 8px; font:700 2rem/1.1 var(--head); letter-spacing:var(--tracking-head); color:var(--on-dusk)}
+.sent-txt{margin:0; max-width:34ch; font-size:.95rem; color:var(--on-dusk-2)}
+@keyframes sent-in{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion: reduce){ .sent{animation:none} }
 @media (max-width:560px){ .contact-card form{grid-template-columns:1fr} }
 
 /* --------------------------------------------------------------------------
    Footer
    -------------------------------------------------------------------------- */
-footer{background:var(--night); color:var(--on-dusk-3); padding:56px 0 36px; font-size:.93rem}
+footer{background:var(--night); color:var(--on-dusk-3); padding:56px 0 0; font-size:.93rem; overflow:hidden}
 footer .cols{display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:32px}
 footer .brand{color:var(--on-dusk)}
 footer .brand img{height:32px; width:auto; display:block}
 footer .brand .name{font:700 1.25rem var(--head)}
 .footer-about{margin-top:14px; max-width:34ch}
-footer h4{font-size:.95rem; color:var(--on-dusk); margin-bottom:12px; font-weight:600}
-footer .footer-subhead{margin-top:22px}
+footer h4{font:600 .9rem var(--body); color:var(--on-dusk); margin-bottom:12px}
+footer .footer-subhead{margin-top:36px}
 footer ul{list-style:none; padding:0; margin:0}
 footer li{margin-bottom:8px}
-footer a{text-decoration:none}
+footer a{text-decoration:none; transition:color .2s}
 footer a:hover{color:#fff}
-footer .legal{border-top:1px solid var(--dusk-line); margin-top:44px; padding-top:20px; font-size:.82rem; display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px}
-footer .legal a{margin-left:14px}
-@media (max-width:760px){ footer .cols{grid-template-columns:1fr 1fr} }
+footer .legal{border-top:1px solid var(--dusk-line); margin-top:44px; padding-top:20px; font-size:.82rem; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:12px 24px}
+footer .legal-links{display:flex; flex-wrap:wrap; gap:8px 20px}
+/* Oversized wordmark, cut in half by the bottom edge of the page */
+.footer-word{container-type:inline-size; margin-top:56px; pointer-events:none; user-select:none}
+/* Public Sans 700 metrics: ink spans 5.5275em, starts .05em in; line-height 1 puts the ink top at .12em
+   and the ink midline at .491em, so the box height cuts the letters in half at the bottom of the page */
+.footer-word span{display:block; font:700 18.09cqi/1 var(--head); letter-spacing:0; margin-left:-.05em; height:.62em; overflow:hidden; white-space:nowrap; color:transparent; -webkit-text-stroke:1px color-mix(in srgb,var(--indigo) 25%,transparent)}
+@media (max-width:760px){ footer .cols{grid-template-columns:1fr 1fr} footer .cols > div:first-child{grid-column:1 / -1} }

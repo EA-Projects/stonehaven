@@ -85,20 +85,6 @@
   });
 
   /* ------------------------------------------------------------------
-     Press list: show / hide older announcements
-     ------------------------------------------------------------------ */
-  var newsToggle = document.getElementById('news-toggle');
-
-  if (newsToggle) {
-    newsToggle.addEventListener('click', function () {
-      var open = newsToggle.getAttribute('aria-expanded') !== 'true';
-      document.querySelectorAll('.news-more').forEach(function (li) { li.hidden = !open; });
-      newsToggle.setAttribute('aria-expanded', open);
-      newsToggle.textContent = open ? 'Show fewer' : 'More announcements';
-    });
-  }
-
-  /* ------------------------------------------------------------------
      "The Stonehaven way" video: play hides the cover and shows controls;
      the cover comes back when the video ends
      ------------------------------------------------------------------ */
@@ -160,8 +146,15 @@
 
       err.textContent = msg;
       err.hidden = !msg;
-      sent.hidden = !!msg;
-      if (invalid) invalid.focus();
+      if (invalid) {
+        invalid.focus();
+        return;
+      }
+
+      // Success covers the form; inert keeps it from being focused or sent again
+      form.inert = true;
+      sent.hidden = false;
+      sent.focus();
     });
   }
 })();
