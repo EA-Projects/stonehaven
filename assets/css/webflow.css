@@ -157,7 +157,7 @@ h6,.heading-style-h6{font-family:var(--font--body); font-size:.9rem; font-weight
 .section-header_component{display:flex; flex-direction:column; align-items:center; gap:24px; margin-bottom:64px; text-align:center}
 .section-header_component.is-compact{margin-bottom:40px}
 .section-header_component.is-flush{margin-bottom:0}
-.section-header_eyebrow{display:inline-block; margin-bottom:40px; color:var(--color-brand--blue); font-family:var(--font--body); font-size:.9rem; font-weight:600; line-height:normal}
+.section-header_eyebrow{display:inline-block; margin-bottom:20px; color:var(--color-brand--blue); font-family:var(--font--body); font-size:.9rem; font-weight:600; line-height:normal}
 .section-header_eyebrow.is-alternate{color:var(--color-brand--sky)}
 .section-header_heading{max-width:24ch; text-wrap:balance /* custom property */}
 .section-header_heading.is-alternate{color:var(--color-on-dark--primary)}
@@ -167,9 +167,6 @@ h6,.heading-style-h6{font-family:var(--font--body); font-size:.9rem; font-weight
   .section-header_component{margin-bottom:44px}
   .section-header_component.is-compact{margin-bottom:40px}
   .section-header_component.is-flush{margin-bottom:0}
-}
-@media (max-width:767px){
-  .section-header_eyebrow{margin-bottom:24px}
 }
 
 /* CTA banner: wave background, copy on the left, button on the right */
