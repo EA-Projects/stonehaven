@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Stonehaven — website concept (review draft 1.5)</title>
+<title>Stonehaven</title>
 <meta name="description" content="Stonehaven is a hybrid fronting carrier and a member of the Ledgebrook group. We provide MGAs and program administrators with AM Best A- (Excellent), FSC VIII rated paper, a structured onboarding process and timely decisions from experienced underwriters.">
 <link rel="icon" type="image/png" href="assets/img/stonehaven-mark.png">
 
@@ -34,7 +34,7 @@
     <div class="padding-global">
       <div class="container-large">
         <nav class="navbar_container" aria-label="Main">
-          <a class="navbar_logo-link" href="#top">
+          <a class="navbar_logo-link" href="/">
             <img class="navbar_logo" src="assets/img/logo-light.png" alt="Stonehaven Specialty Insurance, a member company of Ledgebrook Inc. Home">
             <img class="navbar_logo is-dark" src="assets/img/logo-dark.png" alt="Stonehaven Specialty Insurance, a member company of Ledgebrook Inc. Home">
           </a>
@@ -50,13 +50,16 @@
             <a class="navbar_login" href="#portal" title="Opens the partner portal (separate secure site)">Partner login</a>
             <a class="navbar_button" href="#contact">Contact us</a>
           </div>
-          <button class="navbar_menu-button" type="button" aria-expanded="false" aria-controls="navbar-menu" id="navbar-toggle">Menu</button>
+          <button class="navbar_menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navbar-menu" id="navbar-toggle">
+            <svg class="navbar_menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+            <svg class="navbar_menu-icon is-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+          </button>
         </nav>
       </div>
     </div>
   </header>
 
-  <main class="main-wrapper" id="top">
+  <main class="main-wrapper">
 
     <!-- ================================================================
          Hero (audience switch: Webflow native Tabs)
@@ -256,10 +259,10 @@
                 <div class="programs_orbit-center"><div class="programs_orbit-title">Ledgebrook technology platform</div><div class="programs_orbit-text text-size-tiny">From the first conversation to a live program</div></div>
                 <!-- Text version of the steps: read by screen readers, shown as a numbered list on mobile -->
                 <ol class="programs_orbit-steps" role="list">
-                  <li class="programs_orbit-step text-size-small"><span class="programs_orbit-step-number" aria-hidden="true">1</span>Secure data room</li>
-                  <li class="programs_orbit-step text-size-small"><span class="programs_orbit-step-number" aria-hidden="true">2</span>Automated data checks</li>
-                  <li class="programs_orbit-step text-size-small"><span class="programs_orbit-step-number" aria-hidden="true">3</span>Data feeds connected</li>
-                  <li class="programs_orbit-step text-size-small"><span class="programs_orbit-step-number" aria-hidden="true">4</span>Live program scorecard</li>
+                  <li class="programs_orbit-step"><span class="programs_orbit-step-number" aria-hidden="true">1</span>Secure data room</li>
+                  <li class="programs_orbit-step"><span class="programs_orbit-step-number" aria-hidden="true">2</span>Automated data checks</li>
+                  <li class="programs_orbit-step"><span class="programs_orbit-step-number" aria-hidden="true">3</span>Data feeds connected</li>
+                  <li class="programs_orbit-step"><span class="programs_orbit-step-number" aria-hidden="true">4</span>Live program scorecard</li>
                 </ol>
               </div>
             </div>
@@ -563,16 +566,20 @@
             <h4 class="footer_heading heading-style-h6">Company</h4>
             <ul class="footer_link-list" role="list"><li class="footer_link-item"><a class="footer_link" href="#about">About</a></li><li class="footer_link-item"><a class="footer_link" href="#team">Leadership</a></li><li class="footer_link-item"><a class="footer_link" href="#careers">Careers</a></li><li class="footer_link-item"><a class="footer_link" href="#insights">Insights</a></li><li class="footer_link-item"><a class="footer_link" href="#contact">Contact</a></li></ul>
           </div>
-          <div class="footer_column">
-            <h4 class="footer_heading heading-style-h6">Policyholders</h4>
-            <ul class="footer_link-list" role="list"><li class="footer_link-item"><a class="footer_link" href="#top">Report a claim</a></li><li class="footer_link-item"><a class="footer_link" href="#top">Notices and complaints</a></li><li class="footer_link-item"><a class="footer_link" href="#top">State licenses</a></li></ul>
-            <h4 class="footer_heading heading-style-h6 is-spaced">Ledgebrook group</h4>
-            <ul class="footer_link-list" role="list"><li class="footer_link-item"><a class="footer_link" href="https://www.ledgebrook.com/" target="_blank" rel="noopener">Ledgebrook</a></li><li class="footer_link-item"><a class="footer_link" href="https://www.ledgebrook.com/ledgebrook-re" target="_blank" rel="noopener">Ledgebrook Re</a></li></ul>
+          <div class="footer_column is-split">
+            <div class="footer_group">
+              <h4 class="footer_heading heading-style-h6">Policyholders</h4>
+              <ul class="footer_link-list" role="list"><li class="footer_link-item"><a class="footer_link" href="#">Report a claim</a></li><li class="footer_link-item"><a class="footer_link" href="#">Notices and complaints</a></li><li class="footer_link-item"><a class="footer_link" href="#">State licenses</a></li></ul>
+            </div>
+            <div class="footer_group">
+              <h4 class="footer_heading heading-style-h6">Ledgebrook group</h4>
+              <ul class="footer_link-list" role="list"><li class="footer_link-item"><a class="footer_link" href="https://www.ledgebrook.com/" target="_blank" rel="noopener">Ledgebrook</a></li><li class="footer_link-item"><a class="footer_link" href="https://www.ledgebrook.com/ledgebrook-re" target="_blank" rel="noopener">Ledgebrook Re</a></li></ul>
+            </div>
           </div>
         </div>
         <div class="footer_bottom">
           <div class="footer_copyright">© 2026 Stonehaven</div>
-          <div class="footer_legal-list"><a class="footer_link" href="#top">Privacy</a><a class="footer_link" href="#top">Terms</a><a class="footer_link" href="#top">Accessibility</a><a class="footer_link" href="#top">Fraud warning</a></div>
+          <div class="footer_legal-list"><a class="footer_link" href="#">Privacy</a><a class="footer_link" href="#">Terms</a><a class="footer_link" href="#">Accessibility</a><a class="footer_link" href="#">Fraud warning</a></div>
         </div>
         <!-- Oversized outlined wordmark (styles in custom.css) -->
         <div class="footer_wordmark" aria-hidden="true"><div class="footer_wordmark-text">Stonehaven</div></div>

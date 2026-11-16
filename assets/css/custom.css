@@ -40,6 +40,10 @@ a.arrow-link_component:focus-visible .arrow-link_icon,
 /* Native select dropdown list (Windows renders options on a light surface) */
 .form_input.is-select option{color:var(--color-text--primary)}
 
+/* Menu button: swap the menu icon for the close icon while the menu is open (Webflow: .w--open) */
+.navbar_menu-button.w--open .navbar_menu-icon{display:none}
+.navbar_menu-button.w--open .navbar_menu-icon.is-close{display:block}
+
 /* Form success fades in */
 .form_message-success{animation:form-success-in .35s ease-out}
 @keyframes form-success-in{from{opacity:0}to{opacity:1}}
@@ -54,6 +58,11 @@ a.arrow-link_component:focus-visible .arrow-link_icon,
 .video_component.is-playing .video_media{visibility:visible}
 .video_component.is-playing .video_play-button{display:none}
 @media (max-width:991px){ .video_component{aspect-ratio:16/9; height:auto} }
+@media (max-width:767px){
+  .video_play-button{width:55px; height:55px; padding-left:3px; box-shadow:0 0 0 6px rgba(255,255,255,.12)}
+  .video_play-button:hover{box-shadow:0 0 0 9px rgba(255,255,255,.16)}
+  .video_play-button svg{width:18px; height:18px}
+}
 
 /* Platform ring (Code Embed) ------------------------------------------------ */
 /* The ring fills clockwise in four steps (one per platform step), holds full,
@@ -126,14 +135,14 @@ a.arrow-link_component:focus-visible .arrow-link_icon,
 
 /* Navbar open menu on tablet and mobile (Webflow: Navbar open state) */
 @media (max-width:991px){
-  .navbar_component.is-open{height:auto; background-color:var(--color-dark--dusk); color:var(--color-on-dark--primary)}
+  .navbar_component.is-open{height:auto; background-color:var(--color-dark--night); color:var(--color-on-dark--primary)}
   .navbar_component.is-open .navbar_background{display:none}
   .navbar_component.is-open .navbar_logo:not(.is-dark){display:block}
   .navbar_component.is-open .navbar_logo.is-dark{display:none}
   .navbar_component.is-open .navbar_container{flex-wrap:wrap; height:auto; padding:16px 0}
-  .navbar_component.is-open .navbar_menu{display:flex; flex-direction:column; align-items:flex-start; order:3; width:100%; margin-left:0}
-  .navbar_component.is-open .navbar_menu-links{flex-direction:column; gap:14px; width:100%; padding:12px 0 4px}
-  .navbar_component.is-open .navbar_divider{display:none}
-  .navbar_component.is-open .navbar_login{width:100%; margin:0 0 14px; padding:12px 0 0; border-top:1px solid rgba(238,241,252,.25)}
-  .navbar_component.is-open .navbar_button{display:inline-block; margin-bottom:14px}
+  .navbar_component.is-open .navbar_menu{display:flex; flex-wrap:wrap; align-items:center; gap:12px; order:3; width:100%; margin-left:0}
+  .navbar_component.is-open .navbar_menu-links{flex-direction:column; gap:12px; width:100%; padding-top:12px}
+  .navbar_component.is-open .navbar_divider{width:100%; height:1px; margin:0; background-color:rgba(238,241,252,.25)}
+  .navbar_component.is-open .navbar_login{margin:0}
+  .navbar_component.is-open .navbar_button{display:inline-block; margin-left:auto}
 }
