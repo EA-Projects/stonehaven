@@ -488,7 +488,7 @@ h6,.heading-style-h6{font-family:var(--font--body); font-size:.9rem; font-weight
 .about_family-name{color:var(--color-on-dark--primary); font-family:var(--font--heading); font-size:1.08rem; font-weight:600; line-height:normal}
 .about_family-role{grid-column:1 / -1; color:var(--color-on-dark--secondary)}
 .about_family-role.is-current{color:rgba(238,241,252,.85)}
-.about_note{max-width:65ch; margin:40px auto 0; color:var(--color-on-dark--secondary); text-align:center}
+.about_note{max-width:none; margin:40px auto 0; color:var(--color-on-dark--secondary); text-align:center}
 @media (max-width:991px){
   .about_family-list{grid-template-columns:1fr}
 }
@@ -553,7 +553,7 @@ h6,.heading-style-h6{font-family:var(--font--body); font-size:.9rem; font-weight
 .form_input.is-select{padding-right:40px; background-image:url(../img/select-chevron.svg); background-position:right 10px center; background-size:20px 20px; background-repeat:no-repeat; cursor:pointer; appearance:none /* custom property */}
 .form_input.is-text-area{display:block; min-height:120px; max-height:280px; resize:vertical /* custom property */}
 .form_actions{display:flex; flex-wrap:wrap; grid-column:1 / -1; justify-content:space-between; align-items:center; gap:16px}
-.form_disclaimer{margin:0; color:var(--color-gray--400)}
+.form_disclaimer{margin:0; color:var(--color-gray--400); opacity: .4}
 /* Success replaces the form; same height as the form so the box doesn't jump */
 .form_message-success{padding:0; background-color:transparent; text-align:center}
 .form_success-content{display:flex; flex-direction:column; justify-content:center; align-items:center; min-height:428px}
