@@ -30,7 +30,7 @@ A guide to building this site in Webflow (by hand or with the Webflow MCP) from 
 
 They all live in `:root` in `webflow.css`. In Webflow, create them with the same names in one collection organised in folders:
 
-- **Colors:** `color-brand/*`, `color-dark/*`, `color-on-dark/*`, `color-light/*`, `color-text/*`, `color-border/*` and `color-tag/*`.
+- **Colors:** `color-brand/*`, `color-dark/*`, `color-on-dark/*`, `color-light/*`, `color-text/*`, `color-border/*` and the palette folders `color-blue/*`, `color-purple/*`, `color-green/*`, `color-orange/*` and `color-gray/*` (only the steps in use).
 - **Typography:** `font/heading` (Public Sans), `font/body` (Inter), `tracking/heading` and `tracking/body`.
 - **Radius:** `radius/small` (4px) and `radius/medium` (6px).
 
@@ -59,14 +59,16 @@ In `webflow.css`, sections "Tags" and "Typography scale": `body`, `a`, `h1`–`h
 
 | Level | Size | Weight | Line height | Font |
 |---|---|---|---|---|
-| h1 / `heading-style-h1` | clamp(2.4rem, 4vw, 3.4rem) | 700 | 1.12 | Public Sans |
-| h2 / `heading-style-h2` | clamp(2rem, 3.2vw, 2.875rem) | 700 | 1.08 | Public Sans |
-| h3 / `heading-style-h3` | 1.7rem | 700 | 1.2 | Public Sans |
-| h4 / `heading-style-h4` | 1.375rem | 600 | 1.3 | Public Sans |
-| h5 / `heading-style-h5` | 1.25rem | 600 | 1.3 | Public Sans |
+| h1 / `heading-style-h1` | clamp(2.5rem, 4vw, 3.375rem) | 700 | 1.12 | Public Sans |
+| h2 / `heading-style-h2` | clamp(2.125rem, 3.25vw, 2.75rem) | 700 | 1.08 | Public Sans |
+| h3 / `heading-style-h3` | clamp(1.75rem, 2.6vw, 2.2rem) | 700 | 1.2 | Public Sans |
+| h4 / `heading-style-h4` | clamp(1.5rem, 2.05vw, 1.75rem) | 600 | 1.3 | Public Sans |
+| h5 / `heading-style-h5` | clamp(1.25rem, 1.6vw, 1.375rem) | 600 | 1.3 | Public Sans |
 | h6 / `heading-style-h6` | .9rem | 600 | 1.2 | Inter |
 
 h1 to h5 use `tracking/heading` and h6 uses `tracking/body`.
+
+On desktop (from about 1360px) the sizes are 54 / 44 / 35.2 / 28 / 22px, roughly a 1.25 step between levels; h1 to h5 shrink gradually on narrower screens down to 40 / 34 / 28 / 24 / 20px. h6 sits outside the ratio on purpose: it's a small Inter label that matches the section eyebrow.
 
 **Paragraphs:** body text is 1rem with a 1.6 line height, inherited across the site. On top of that there are three utility sizes:
 
@@ -91,7 +93,7 @@ h1 to h5 use `tracking/heading` and h6 uses `tracking/body`.
 | 16px | 2.25 | `arrow-link` arrow |
 | 14px | 2.5 | Platform signals |
 
-- **Icons in use:** arrow-right, clock, shield, cpu, search-check, award, users, quote, play (filled), user, trending-up, briefcase, house, layers, map-pin, file-check, triangle-alert, check and chevron-down (select arrow, in `assets/img/select-chevron.svg`).
+- **Icons in use:** arrow-right, clock, shield, cpu, search-check, award, users, quote, play (filled), user, trending-up, briefcase, house, layers, map-pin, file-check, coins, eye, shield-check, triangle-alert, check and chevron-down (select arrow, in `assets/img/select-chevron.svg`).
 - **Not from Lucide:** the Ledgebrook and Stonehaven marks are brand logos, not icons, and are not replaced.
 
 ## Native elements
@@ -100,7 +102,7 @@ h1 to h5 use `tracking/heading` and h6 uses `tracking/body`.
 |---|---|---|
 | Header | **Navbar** | `navbar_component` (Navbar) › `navbar_container` › `navbar_logo-link` (Brand), `navbar_menu` (Nav Menu) with `navbar_link` (Nav Links), `navbar_divider`, `navbar_login`, `navbar_button`, and `navbar_menu-button` (Menu Button) with two Lucide icons, `navbar_menu-icon` (menu) and `navbar_menu-icon is-close` (x), replacing Webflow's default icon. Collapses on Tablet. |
 | MGAs / Reinsurers switch | **Tabs** | `hero_tabs` (Tabs) › `hero_tabs-menu` (Tabs Menu) with `hero_tab-link` (Tab Links), `hero_tabs-content` (Tabs Content) with two `hero_tab-pane`. The active tab is styled in the Current state (`.w--current`). |
-| Form | **Form Block** | `form_component` (Form Block) › `form_form` (Form), `form_message-success` (Success Message), `form_message-error` (Error Message). Fields: `form_input`, `form_input is-select` and `form_input is-text-area`. |
+| Form | **Form Block** | Sits in `contact_form-wrapper`, a light card on the right of `contact_component` (a 900px dark container with 32px padding and gap, and `contact_content` on the left; they stack from Tablet down). The submit button is `button is-blue`, the variant for light surfaces. `form_component` (Form Block) › `form_form` (Form), `form_message-success` (Success Message), `form_message-error` (Error Message). Fields: `form_input`, `form_input is-select` and `form_input is-text-area`. Two columns (First name | Last name, Work email | Inquiry type) and the message full width (`form_field-wrapper is-full`); one column on Mobile. |
 | About cards with a link | **Link Block** | `about_family-card`. The Stonehaven card is a Div, not a link. |
 | Lists | **List / List Item** | `proof_list`, `about_family-list`, `insights_*-list`, `footer_link-list`, `programs_orbit-steps` |
 | Icons, Platform and hero charts, Ledgebrook logos | **Code Embed** | The class goes on the embed (for example `proof_icon` or `platform_chart-plot`) and the `<svg>` goes inside. |
@@ -110,7 +112,7 @@ h1 to h5 use `tracking/heading` and h6 uses `tracking/body`.
 ## Recommended components
 
 - **Navbar** and **Footer.**
-- **CTA banner** (`cta-banner_component`). Used three times, with props for title, text, button text, button link, `id` and `data-topic`.
+- **CTA banner** (`cta-banner_component`). Used three times, with props for title, text, button text, button link, `id` and `data-topic`. Two versions: the base, solid `color-dark/night` with `button is-purple` (Programs and Platform), and `is-light`, solid blue-100 with dark text and `button is-blue` (Leadership); its heading and text take the same `is-light` combo.
 - **Section header** (`section-header_component`). Props: eyebrow, title and text. The `is-alternate` variant is for dark sections, and `is-compact` / `is-flush` control the bottom margin.
 
 ## Interactions to build
@@ -131,7 +133,6 @@ h1 to h5 use `tracking/heading` and h6 uses `tracking/body`.
   - Menu button: swaps the menu icon for the close icon while the menu is open (`.w--open`).
   - Arrow link hover: underline and icon nudge, also when hovering the card.
   - Who we work with ring (conic gradient with a mask).
-  - Select options.
   - Success message fade-in.
   - Video, Platform ring and the footer "Stonehaven" wordmark.
 - **`custom.js`:**
@@ -181,7 +182,7 @@ Test run on Nov 15, 2026 on the "Website Test" site, building the Reinsurers sec
   - `label` is bold by default.
   - `.w-form` has a margin.
   - `.w-form-done` and `.w-form-fail` have their own background and padding.
-- [ ] **Success message:** in Webflow the form hides and the message appears. `form_success-content` has a 384px min height so the box doesn't change size on desktop.
+- [ ] **Success message:** in Webflow the form hides and the message appears. `form_success-content` has a 428px min height so the box doesn't change size on desktop.
 
 ## Before launch
 
