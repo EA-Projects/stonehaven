@@ -138,6 +138,7 @@ h1 to h5 use `tracking/heading` and h6 uses `tracking/body`.
   - Preselects the inquiry type from the `data-topic` attribute.
   - Video.
   - Form validation. Runs before Webflow's submission and stops it if there are errors.
+- **Head code** (Site settings › Custom code › Head code): `<meta name="robots" content="noindex, nofollow">` while the site is in review. Also turn on Site settings › SEO › "Disable Webflow subdomain indexing" for the webflow.io staging domain.
 - **Custom attributes to add:**
   - `data-topic` on the buttons that preselect the inquiry type.
   - Anchor ids: `#programs`, `#reinsurers`, `#platform`, `#about`, `#team`, `#insights`, `#contact`, `#contact-sec`, `#portal`, `#careers`, `#press`, `#industry-insights`, `#stonehaven-way` and `#claims-philosophy`.
@@ -185,6 +186,7 @@ Test run on Nov 15, 2026 on the "Website Test" site, building the Reinsurers sec
 ## Before launch
 
 - Remove the `concept-banner`.
+- Remove the `noindex, nofollow` robots meta tag from the head code.
 - Use an absolute URL for `og:image`.
 - Replace the video and the bracketed placeholders (`[State]`, `[Name]`, `[MGA name]`, etc.).
 - Later: move Press, Insights and Leadership to the CMS without changing the current classes.
