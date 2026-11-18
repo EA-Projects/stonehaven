@@ -182,7 +182,7 @@ h6,.heading-style-h6{font-family:var(--font--body); font-size:.9rem; font-weight
 .cta-banner_component{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:24px 48px; margin-top:16px; padding:32px 40px; border-radius:var(--radius--medium); background-color:var(--color-dark--night); color:var(--color-on-dark--primary)}
 .cta-banner_heading{margin:0 0 6px; color:var(--color-on-dark--primary)}
 .cta-banner_text{max-width:72ch; margin:0; color:var(--color-gray--200)}
-/* Variant: solid light blue (Leadership) */
+/* Variant: solid light blue (Team) */
 .cta-banner_component.is-light{background-color:var(--color-blue--100); color:var(--color-text--primary)}
 .cta-banner_heading.is-light{color:var(--color-text--title)}
 .cta-banner_text.is-light{color:var(--color-text--secondary)}
@@ -324,6 +324,10 @@ h6,.heading-style-h6{font-family:var(--font--body); font-size:.9rem; font-weight
 @media (max-width:991px){
   .way_component{grid-template-columns:1fr; gap:32px}
 }
+@media (max-width:767px){
+  .way_header,.way_heading{text-align:center}
+  .way_text{margin-left:auto; margin-right:auto; text-align:center}
+}
 
 /* --------------------------------------------------------------------------
    Programs (MGAs)
@@ -344,6 +348,8 @@ h6,.heading-style-h6{font-family:var(--font--body); font-size:.9rem; font-weight
 .programs_orbit{position:relative; justify-self:center; width:100%; max-width:440px}
 .programs_orbit-center{position:absolute; top:28%; bottom:28%; left:14%; right:14%; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:8px; text-align:center}
 .programs_orbit-logo{display:flex; margin-bottom:6px}
+/* "Ledgebrook" sits on its own line inside the ring; inline on mobile */
+.programs_orbit-title-line{display:block}
 .programs_orbit-title{color:var(--color-text--title); font-family:var(--font--heading); font-size:1.125rem; font-weight:700; line-height:1.25; letter-spacing:var(--tracking--heading); white-space:nowrap}
 /* Text version of the steps: visually hidden (screen readers), a numbered list on mobile */
 .programs_orbit-steps{position:absolute; overflow:hidden; width:1px; height:1px; margin:0; padding:0; clip:rect(0 0 0 0) /* custom property */; white-space:nowrap}
@@ -377,6 +383,10 @@ h6,.heading-style-h6{font-family:var(--font--body); font-size:.9rem; font-weight
   .programs_benefits{padding:24px 20px}
   .programs_pillar{column-gap:16px}
   .programs_spec{padding:24px 20px}
+  .programs_orbit-logo{display:none}
+  .programs_orbit-title-line{display:inline}
+  .programs_use{display:grid; grid-template-columns:44px minmax(0,1fr); column-gap:16px}
+  .programs_use-icon{grid-row:span 2; margin-bottom:0}
 }
 
 /* --------------------------------------------------------------------------
@@ -401,6 +411,9 @@ h6,.heading-style-h6{font-family:var(--font--body); font-size:.9rem; font-weight
   .reinsurers_cards{grid-template-columns:1fr}
   .reinsurers_divider{margin:40px 0}
   .reinsurers_facts{grid-template-columns:1fr; gap:24px}
+}
+@media (max-width:767px){
+  .reinsurers_card{padding:24px 20px}
 }
 
 /* --------------------------------------------------------------------------
@@ -494,16 +507,23 @@ h6,.heading-style-h6{font-family:var(--font--body); font-size:.9rem; font-weight
 }
 
 /* --------------------------------------------------------------------------
-   Leadership
+   Team
    -------------------------------------------------------------------------- */
-.team_list{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:8px}
-.team_card{position:relative; display:flex; flex-direction:column; justify-content:flex-end; overflow:hidden; min-height:330px; border-radius:var(--radius--medium); background-image:linear-gradient(180deg,var(--color-dark--navy) 0%,var(--color-dark--night) 100%); color:var(--color-on-dark--primary)}
-.team_card-content{position:relative; padding:40px}
+.team_list{display:grid; grid-template-columns:repeat(20,minmax(0,1fr)); gap:16px; margin:8px 0 0; padding:0; list-style:none}
+/* Four large cards on the first row (5 of 20 columns each), five on the second (4 each) */
+.team_card{position:relative; display:flex; flex-direction:column; justify-content:flex-end; grid-column:span 4; overflow:hidden; min-height:220px; border-radius:var(--radius--medium); background-image:linear-gradient(180deg,var(--color-dark--navy) 0%,var(--color-dark--night) 100%); color:var(--color-on-dark--primary)}
+.team_card.is-large{grid-column:span 5; min-height:330px}
+.team_card-content{position:relative; padding:24px}
 .team_card-title{color:var(--color-light--white)}
-.team_card-role{margin-top:8px; color:var(--color-brand--sky); font-family:var(--font--body); font-size:.9rem; font-weight:600; line-height:normal}
+.team_card-role{margin-top:8px; color:var(--color-brand--sky); font-family:var(--font--body); font-size:.85rem; font-weight:600; line-height:1.4}
+@media (max-width:991px){
+  .team_list{grid-template-columns:repeat(6,minmax(0,1fr))}
+  .team_card{grid-column:span 2}
+  .team_card.is-large{grid-column:span 3; min-height:280px}
+}
 @media (max-width:767px){
-  .team_list{grid-template-columns:1fr}
-  .team_card{min-height:200px}
+  .team_list{grid-template-columns:1fr; gap:12px}
+  .team_card,.team_card.is-large{grid-column:auto; min-height:300px}
 }
 
 /* --------------------------------------------------------------------------
@@ -539,9 +559,12 @@ h6,.heading-style-h6{font-family:var(--font--body); font-size:.9rem; font-weight
    .form_message-error = .w-form-fail)
    -------------------------------------------------------------------------- */
 .contact_component{display:grid; grid-template-columns:minmax(0,3fr) minmax(0,7fr); overflow:hidden; max-width:900px; margin-left:auto; margin-right:auto; border-radius:var(--radius--medium)}
-.contact_content{display:flex; flex-direction:column; align-items:flex-start; padding:32px; background-color:var(--color-dark--night); color:var(--color-on-dark--primary)}
+.contact_content{display:flex; flex-direction:column; align-items:flex-start; padding:32px 32px 42px; background-color:var(--color-dark--night); color:var(--color-on-dark--primary)}
 .contact_heading{color:var(--color-on-dark--primary)}
 .contact_text{margin:20px 0 0; color:var(--color-on-dark--secondary)}
+/* Pinned to the bottom of the column */
+.contact_email{margin-top:auto; padding-top:24px; color: var(--color-on-dark--secondary); opacity: .5; text-decoration:underline 1px transparent; text-underline-offset:4px; transition:text-decoration-color .2s, opacity .2s}
+.contact_email:hover{text-decoration-color:currentColor; opacity: 1}
 .contact_form-wrapper{position:relative; padding:32px; background-color:var(--color-brand--tint)}
 .form_component{margin:0}
 .form_form{display:grid; grid-template-columns:1fr 1fr; gap:32px}
@@ -578,7 +601,7 @@ h6,.heading-style-h6{font-family:var(--font--body); font-size:.9rem; font-weight
 .footer_brand{display:flex; align-items:center; gap:12px; color:var(--color-on-dark--primary)}
 .footer_logo{display:block; width:auto; height:32px}
 .footer_brand-name{font-family:var(--font--heading); font-size:1.25rem; font-weight:700; line-height:normal}
-.footer_description{max-width:34ch; margin-top:14px}
+.footer_description{max-width:34ch; margin-top:14px; text-wrap:pretty /* custom property */}
 .footer_heading{margin-bottom:12px; color:var(--color-on-dark--primary)}
 /* Policyholders + Ledgebrook group share a column; side by side on mobile */
 .footer_column.is-split{display:grid; row-gap:28px}
@@ -586,14 +609,21 @@ h6,.heading-style-h6{font-family:var(--font--body); font-size:.9rem; font-weight
 .footer_link-item{margin-bottom:8px}
 .footer_link{text-decoration:none; transition:color .2s}
 .footer_link:hover{color:var(--color-light--white)}
-.footer_bottom{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:12px 24px; margin-top:44px; padding-top:20px; border-top:1px solid var(--color-dark--line); font-size:.82rem}
-.footer_legal-list{display:flex; flex-wrap:wrap; gap:8px 20px}
+.footer_bottom{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-start; gap:12px 48px; margin-top:44px; padding-top:20px; border-top:1px solid var(--color-dark--line); font-size:.82rem}
+.footer_copyright{flex:1 1 0; min-width:0}
+.footer_copyright-text{max-width:none; margin:0}
+.footer_disclaimer{max-width:60ch; margin:6px 0 0; font-size:.72rem; line-height:1.6; opacity:.3}
+.footer_link.is-inline{text-decoration:underline; text-underline-offset:2px}
+.footer_legal-list{display:flex; flex:none; flex-wrap:wrap; gap:8px 20px}
 @media (max-width:767px){
   .footer_top{grid-template-columns:1fr 1fr; text-align:center}
   .footer_brand-column{grid-column:1 / -1}
   .footer_brand{justify-content:center}
   .footer_description{margin-left:auto; margin-right:auto}
   .footer_column.is-split{grid-column:1 / -1; grid-template-columns:1fr 1fr; column-gap:32px}
-  .footer_bottom{flex-direction:column; justify-content:center}
-  .footer_legal-list{justify-content:center}
+  .footer_bottom{flex-direction:column; align-items:center; gap:32px 48px; text-align:center}
+  .footer_copyright-text{text-wrap:balance /* custom property */}
+  .footer_copyright{flex:none}
+  .footer_disclaimer{margin-left:auto; margin-right:auto}
+  .footer_legal-list{display:grid; grid-template-columns:auto auto; justify-content:center; gap:8px 24px}
 }

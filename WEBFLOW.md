@@ -112,7 +112,7 @@ On desktop (from about 1360px) the sizes are 54 / 44 / 35.2 / 28 / 22px, roughly
 ## Recommended components
 
 - **Navbar** and **Footer.**
-- **CTA banner** (`cta-banner_component`). Used three times, with props for title, text, button text, button link, `id` and `data-topic`. Two versions: the base, solid `color-dark/night` with `button is-purple` (Programs and Platform), and `is-light`, solid blue-100 with dark text and `button is-blue` (Leadership); its heading and text take the same `is-light` combo.
+- **CTA banner** (`cta-banner_component`). Used three times, with props for title, text, button text, button link, `id` and `data-topic`. Two versions: the base, solid `color-dark/night` with `button is-purple` (Programs and Platform), and `is-light`, solid blue-100 with dark text and `button is-blue` (Team); its heading and text take the same `is-light` combo.
 - **Section header** (`section-header_component`). Props: eyebrow, title and text. The `is-alternate` variant is for dark sections, and `is-compact` / `is-flush` control the bottom margin.
 
 ## Interactions to build
@@ -190,4 +190,4 @@ Test run on Nov 15, 2026 on the "Website Test" site, building the Reinsurers sec
 - Remove the `noindex, nofollow` robots meta tag from the head code.
 - Use an absolute URL for `og:image`.
 - Replace the video and the bracketed placeholders (`[State]`, `[Name]`, `[MGA name]`, etc.).
-- Later: move Press, Insights and Leadership to the CMS without changing the current classes.
+- Later: move Press, Insights and Team to the CMS without changing the current classes.
